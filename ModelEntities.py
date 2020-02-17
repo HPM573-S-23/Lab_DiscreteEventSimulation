@@ -11,9 +11,6 @@ class Patient:
         self.tJoinedWaitingRoom = 0     # time the patient joined the waiting room
         self.tLeftWaitingRoom = 0       # time the patient left the waiting room
 
-    def __str__(self):
-        return "Patient " + str(self.id)
-
 
 class WaitingRoom:
     def __init__(self, sim_out):
@@ -68,10 +65,6 @@ class ExamRoom:
         self.simOut = sim_out
         self.isBusy = False
         self.patientBeingServed = None  # the patient who is being served
-
-    def __str__(self):
-        """ :returns (string) the exam room number """
-        return "Exam Room " + str(self.id)
 
     def exam(self, patient, rng):
         """ starts examining on the patient

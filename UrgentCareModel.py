@@ -90,7 +90,8 @@ class UrgentCareModel:
                                directory='Trace',
                                delete_existing_files=True)
         # patient summary
-        IO.write_csv(file_name='Patients-Replication' + str(self.id) + '.txt',
-                     rows=self.simOutputs.patientSummary,
-                     directory='Patients Summary',
-                     delete_existing_files=True)
+        if D.TRACE_ON:
+            IO.write_csv(file_name='Patients-Replication' + str(self.id) + '.txt',
+                         rows=self.simOutputs.patientSummary,
+                         directory='Patients Summary',
+                         delete_existing_files=True)

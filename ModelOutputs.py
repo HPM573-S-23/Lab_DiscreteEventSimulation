@@ -44,8 +44,7 @@ class SimOutputs:
         """
 
         # increment the number of patients arrived
-        if self.simCal.time > self.warmUpPeriod:
-            self.nPatientsArrived += 1
+        # self.nPatientsArrived += 1
 
         # update the sample path of patients in the system
         self.nPatientInSystem.record_increment(time=self.simCal.time, increment=+1)
@@ -86,10 +85,9 @@ class SimOutputs:
         self.nPatientInSystem.record_increment(time=self.simCal.time, increment=-1)
         self.nExamRoomBusy.record_increment(time=self.simCal.time, increment=-1)
 
-        if self.simCal.time > self.warmUpPeriod:
-            self.nPatientsServed += 1
-            self.patientTimeInWaitingRoom.append(time_waiting)
-            self.patientTimeInSystem.append(time_in_system)
+        self.nPatientsServed += 1
+        self.patientTimeInWaitingRoom.append(time_waiting)
+        self.patientTimeInSystem.append(time_in_system)
 
         # build the patient summary
         if self.traceOn:

@@ -23,9 +23,9 @@ class UrgentCareModel:
         self.urgentCare = None      # urgent care
 
     def simulate(self, sim_duration):
-        """ simulate the urgent care
-        :param sim_duration: duration of simulation (hours)
-         """
+        """ initialize the simulation model
+        :param rng: random number generator
+        """
 
         # random number generator
         rng = np.random.RandomState(seed=self.id)

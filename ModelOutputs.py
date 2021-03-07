@@ -1,4 +1,4 @@
-import SimPy.SamplePathClasses as Path
+import SimPy.SamplePath as Path
 
 
 class SimOutputs:

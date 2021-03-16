@@ -52,7 +52,7 @@ class UrgentCareModel:
         self.simOutputs = O.SimOutputs(sim_cal=self.simCal)
 
         # urgent care
-        self.urgentCare = M.UrgentCare(id=id,
+        self.urgentCare = M.UrgentCare(id=0,
                                        parameters=self.params,
                                        sim_cal=self.simCal,
                                        sim_out=self.simOutputs)
